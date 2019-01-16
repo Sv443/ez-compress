@@ -59,6 +59,8 @@ var decompressedHTML = ez.decode.HTML(ez.decode.CSS(ez.decode.JS(compressedHTML)
 ## Changing the default char:
 ```js
 ez.changeChar("¥"); // this makes the package use "\u00A5" instead of the default "\u00A4" character
+// (old compressions that use this char (¤) can't be decompressed with the new char)
+// (to find out the char, parse the first line of the data which contains a known sequence that contains the char (see below for more info))
 // best option is a char that is as high up as possible on this list (https://unicode-table.com/) and that doesn't at all occur in your to-be-compressed data
 ```
 
@@ -87,7 +89,7 @@ ez.changeChar("¥"); // this makes the package use "\u00A5" instead of the defau
 <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 
 # Sequences:
-Beginning of File/String/Whatever was encoded: `%$?S%`<br>
+Beginning of File/String/Whatever was encoded: `%$?S%` (gets added and removed automatically, `$` contains the escape char)<br>
 Syntax: `$lc`<br><br>
 - `$`: the set / default (`¤`) escape char<br>
 - `l`: the language char from the table below<br>
