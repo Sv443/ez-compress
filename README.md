@@ -41,7 +41,7 @@ var compressedHTML = ez.encode.HTML(rawHTML);
 `
 */
 ```
-<br><br><br><br><br>
+<br><br><br>
 ## Compressing multiple languages:
 ```js
 const ez = require("ez-compress");
@@ -55,7 +55,12 @@ var compressedHTML = ez.encode.HTML(ez.encode.CSS(ez.encode.JS(rawHTML)));
 
 var decompressedHTML = ez.decode.HTML(ez.decode.CSS(ez.decode.JS(compressedHTML)));
 ```
-
+<br><br><br>
+## Changing the default char:
+```js
+ez.changeChar("¥"); // this makes the package use "\u00A5" instead of the default "\u00A4" character
+// best option is a char that is as high up as possible on this list (https://unicode-table.com/) and that doesn't at all occur in your to-be-compressed data
+```
 
 
 
