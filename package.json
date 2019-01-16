@@ -1,0 +1,21 @@
+{
+  "name": "ez-compress",
+  "version": "0.1.0",
+  "description": "Compress known sequences of chars a bit to lower the traffic between two devices. This is not really that practical, I just wanted to make my own compression for some reason",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Sv443/ez-compress.git"
+  },
+  "author": "Sv443",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Sv443/ez-compress/issues"
+  },
+  "homepage": "https://github.com/Sv443/ez-compress#readme",
+  "dependencies": {
+  }
+}
