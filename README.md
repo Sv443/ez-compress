@@ -6,7 +6,7 @@ Compress known sequences of chars a bit to lower the traffic between two devices
 # Installation:
 
 ```
-npm i --save ez-compress
+npm i --save easy-compress
 ```
 
 
