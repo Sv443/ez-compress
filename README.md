@@ -1,4 +1,4 @@
-# ez-compress
+# easy-compress
 Compress known sequences of chars a bit to lower the traffic between two devices. This is not really that practical, I just wanted to make my own compression for some reason.
 
 <br><br><br><br><br><br><br><br>
@@ -18,7 +18,7 @@ npm i --save easy-compress
 # Usage:
 
 ```js
-const ez = require("ez-compress");
+const ez = require("easy-compress");
 const rawHTML = `
 <!DOCTYPE html>
 <html>
@@ -44,7 +44,7 @@ var compressedHTML = ez.encode.HTML(rawHTML);
 <br><br><br>
 ## Compressing multiple languages:
 ```js
-const ez = require("ez-compress");
+const ez = require("easy-compress");
 const rawHTML = fs.readFileSync("./index.html"); // big HTML file with HTML, CSS and JS
 
 var compressedHTML = ez.encode.HTML(ez.encode.CSS(ez.encode.JS(rawHTML)));
